@@ -1,0 +1,28 @@
+<input type="button" value="Delete All" (click)="fundelall()">
+<table border="1">
+  <tr *ngFor="let row of tab_data;let i=index">
+    <td>{{i+1}}</td>
+    <td>{{row.uname}}</td>
+    <td>{{row.city}}</td>
+    <td><input type="button" value="Delete" (click)="fundel(row.uname)"></td>
+    <td><input type="button" value="Update" (click)="funupdate(row)"></td>
+  </tr>
+</table>
+<div>
+    <h1>Insert</h1>
+    Name:<input type="text" [(ngModel)]="t1">
+    <br>
+    City:<input type="text" [(ngModel)]="t2">
+    <br>
+    <input type="button" value="Insert" (click)="funins()">
+  </div>
+
+  <div>
+      <h1>Update</h1>
+      Name:<input type="text" [(ngModel)]="t11">
+      <br>
+      City:<input type="text" [(ngModel)]="t22">
+      <br>
+      <input type="button" value="Save" (click)="funsave()">
+    </div>
+    
